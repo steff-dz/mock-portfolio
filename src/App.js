@@ -1,14 +1,24 @@
 import React from 'react';
+import GlobalStyle from './components/GlobalStyle';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import SiteNavigation from './components/SiteNavigation';
+import Wrapper from './components/Wrapper';
+import HomePage from './pages/HomePage';
 
 function App() {
-  return (
-    <>
-      <h1>Hallo verden!</h1>
-      <p>
-        Jeg er en veldig enkel React-app som du kan endre og leke med som du vil.
-      </p>
-    </>
-  )
-};
+	return (
+		<React.Fragment>
+			<Router>
+				<GlobalStyle />
+				<SiteNavigation />
+				<Wrapper>
+					<Switch>
+						<Route exact path="/" component={HomePage} />
+					</Switch>
+				</Wrapper>
+			</Router>
+		</React.Fragment>
+	);
+}
 
 export default App;
