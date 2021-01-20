@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Cosmic from 'cosmicjs';
+import Ellipse from '../../other/Ellipse';
+import styled from 'styled-components';
+import Portrait from '../../other/Portrait.png';
 
 const HomePage = () => {
 	const [ pageData, setPageData ] = useState(null);
@@ -30,14 +33,30 @@ const HomePage = () => {
 	}
 
 	function renderPage() {
-		return (
-			<main>
-				<p style={{ display: 'none' }} dangerouslySetInnerHTML={{ __html: pageData.content }} />
-			</main>
-		);
+		return <p style={{ display: 'none' }} dangerouslySetInnerHTML={{ __html: pageData.content }} />;
 	}
 
-	return <React.Fragment>{pageData === null ? renderSkeleton() : renderPage()}</React.Fragment>;
+	return (
+		<MainBase>
+			<img src={Portrait} />
+		</MainBase>
+	);
 };
 
+const MainBase = styled.main`
+	height: 100vh;
+	position: relative;
+
+	img {
+		width: 545px;
+		border: 1px solid black;
+		position: absolute;
+		left: 5%;
+	}
+`;
+
 export default HomePage;
+
+//<Ellipse id="ellipse" />
+
+//{pageData === null ? renderSkeleton() : renderPage()}
