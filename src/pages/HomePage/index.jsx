@@ -33,25 +33,57 @@ const HomePage = () => {
 	}
 
 	function renderPage() {
-		return <p style={{ display: 'none' }} dangerouslySetInnerHTML={{ __html: pageData.content }} />;
+		return <article dangerouslySetInnerHTML={{ __html: pageData.content }} />;
 	}
 
 	return (
 		<MainBase>
+			{pageData === null ? renderSkeleton() : renderPage()}
+			<Ellipse id="ellipse" />
 			<img src={Portrait} />
 		</MainBase>
 	);
 };
 
 const MainBase = styled.main`
-	height: 100vh;
 	position: relative;
+	overflow: hidden;
 
 	img {
-		width: 545px;
-		border: 1px solid black;
+		width: 525px;
 		position: absolute;
 		left: 5%;
+		top: 5%;
+	}
+
+	#ellipse {
+		border: 1px solid black;
+	}
+
+	article {
+		width: 50%;
+		z-index: 10;
+		position: absolute;
+		top: 35%;
+		left: 40%;
+
+		h1 {
+			font-size: 3.5rem;
+			margin: 0;
+			padding: 0;
+			font-weight: normal;
+		}
+
+		h1:nth-child(2) {
+			font-size: 8rem;
+			font-weight: normal;
+		}
+
+		p {
+			font-size: 2.5rem;
+			padding: 0;
+			margin: 0;
+		}
 	}
 `;
 

@@ -11,7 +11,6 @@ function App() {
 			<Router>
 				<GlobalStyle />
 				<SiteNavigation />
-
 				<Switch>
 					<Route exact path="/" component={HomePage} />
 				</Switch>
