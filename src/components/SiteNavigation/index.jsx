@@ -31,12 +31,13 @@ const NavBase = styled.nav`
 	border: 1px solid black;
 	background-color: #202020;
 	height: 10vh;
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding-left: 5rem;
 	padding-right: 10rem;
+	overflow: hidden;
 
 	span {
 		font-size: 3.3rem;
@@ -58,6 +59,14 @@ const NavBase = styled.nav`
 		text-decoration: none;
 		color: white;
 		font-size: 2.5rem;
+		padding: 0rem .5rem;
+	}
+
+	@media only screen and (max-width: 900px) {
+		padding-left: 1rem;
+		span {
+			font-size: 2.5rem;
+		}
 	}
 `;
 
