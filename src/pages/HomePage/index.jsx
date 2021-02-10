@@ -22,7 +22,6 @@ const HomePage = () => {
 				props: 'slug,title,content'
 			})
 			.then((data) => {
-				console.log(data);
 				setPageData(data.object);
 			})
 			.catch((error) => {

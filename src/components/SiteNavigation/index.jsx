@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const SiteNavigation = () => {
+	const navList = useRef();
+	const burgerBar = useRef();
+	useEffect(() => {
+		window.addEventListener('resize', () => {
+			if (window.innerWidth < 850) {
+				navList.current.style.display = 'none';
+				burgerBar.current.style.display = 'flex';
+			} else if (window.innerWidth > 850) {
+				navList.current.style.display = 'flex';
+				burgerBar.current.style.display = 'none';
+			}
+		});
+	}, []);
+
+	function handleClick() {
+		console.log('you clicked the burger menu!');
+	}
 	return (
 		<NavBase>
 			<span>Steff Dziadkowiec</span>
-			<ul>
+			<BurgerContainer onClick={() => handleClick()} ref={burgerBar}>
+				<div />
+				<div />
+				<div />
+			</BurgerContainer>
+			<NavList ref={navList}>
 				<NavLink className="nav-item" to="/">
 					<li>home</li>
 				</NavLink>
@@ -22,7 +44,7 @@ const SiteNavigation = () => {
 				<NavLink className="nav-item" to="/blog">
 					<li>blog</li>
 				</NavLink>
-			</ul>
+			</NavList>
 		</NavBase>
 	);
 };
@@ -44,7 +66,30 @@ const NavBase = styled.nav`
 		color: white;
 	}
 
-	ul {
+	@media only screen and (max-width: 850px) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		span {
+			font-size: 2.5rem;
+		}
+	}
+`;
+
+const BurgerContainer = styled.div`
+	height: 75px;
+	width: 75px;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: .5rem;
+	display: none;
+	div {
+		width: 100%;
+		height: 6px;
+		background-color: #ffdf6c;
+	}
+`;
+
+const NavList = styled.ul`
 		display: flex;
 		height: 100%;
 		width: 30vw;
@@ -60,14 +105,8 @@ const NavBase = styled.nav`
 		color: white;
 		font-size: 2.5rem;
 		padding: 0rem .5rem;
-	}
+	
 
-	@media only screen and (max-width: 900px) {
-		padding-left: 1rem;
-		span {
-			font-size: 2.5rem;
-		}
-	}
 `;
 
 export default SiteNavigation;
