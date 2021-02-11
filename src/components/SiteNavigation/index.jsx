@@ -99,6 +99,7 @@ const BurgerContainer = styled.div`
 	justify-content: space-evenly;
 	padding: .5rem;
 	display: none;
+	cursor: pointer;
 	div {
 		width: 100%;
 		height: 6px;
@@ -122,6 +123,7 @@ const MenuOverlayBase = styled.div`
 		font-size: 4rem;
 		color: #ffdf6c;
 		padding: 0 2rem;
+		cursor: pointer;
 	}
 
 	@media only screen and (min-width: 850px) {
@@ -158,6 +160,13 @@ const NavListBase = styled.ul`
 		color: white;
 		font-size: 2.5rem;
 		padding: 0rem .5rem;
+
+		&:hover {
+			color: #ffdf6c;
+		}
+		&:active {
+			color: #ffdf6c;
+		}
 	}
 
 	@media only screen and (max-width: 850px) {
