@@ -127,10 +127,10 @@ const HomeMainBase = styled.main`
 		}
 
 		article {
-			margin: 0;
-			margin-top: 5%;
 			width: 100%;
-			text-align: center;
+			margin: 0;
+			margin-top: 3rem;
+			padding: 0 2.5rem;
 			position: relative;
 
 			h1 {

@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
 html, body {
     height: 100%;
     width: 100%;
+
 }
 
 html {
@@ -19,7 +20,7 @@ html {
 body {
     font-family: sans-serif;
     color: #333;
-
+    overflow-x: hidden;
 }
 
 `;

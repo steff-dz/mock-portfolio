@@ -1,51 +1,68 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const SiteNavigation = () => {
-	const navList = useRef();
-	const burgerBar = useRef();
-	useEffect(() => {
-		window.addEventListener('resize', () => {
-			if (window.innerWidth < 850) {
-				navList.current.style.display = 'none';
-				burgerBar.current.style.display = 'flex';
-			} else if (window.innerWidth > 850) {
-				navList.current.style.display = 'flex';
-				burgerBar.current.style.display = 'none';
-			}
-		});
-	}, []);
+	const burgerMenu = useRef();
 
-	function handleClick() {
+	function handleOpen() {
 		console.log('you clicked the burger menu!');
+		burgerMenu.current.style.right = 0;
 	}
+
+	function handleClose() {
+		burgerMenu.current.style.right = `-600px`;
+	}
+
 	return (
-		<NavBase>
-			<span>Steff Dziadkowiec</span>
-			<BurgerContainer onClick={() => handleClick()} ref={burgerBar}>
-				<div />
-				<div />
-				<div />
-			</BurgerContainer>
-			<NavList ref={navList}>
-				<NavLink className="nav-item" to="/">
-					<li>home</li>
-				</NavLink>
-				<NavLink className="nav-item" to="/about">
-					<li>about</li>
-				</NavLink>
-				<NavLink className="nav-item" to="/projects">
-					<li>projects</li>
-				</NavLink>
-				<NavLink className="nav-item" to="/contact">
-					<li>contact</li>
-				</NavLink>
-				<NavLink className="nav-item" to="/blog">
-					<li>blog</li>
-				</NavLink>
-			</NavList>
-		</NavBase>
+		<header>
+			<MenuOverlayBase ref={burgerMenu}>
+				<i onClick={() => handleClose()} className="fas fa-times" />
+				<MenuListBase>
+					<NavLink className="menu-item" to="/">
+						<li>home</li>
+					</NavLink>
+					<NavLink className="menu-item" to="/">
+						<li>about</li>
+					</NavLink>
+					<NavLink className="menu-item" to="/">
+						<li>projects</li>
+					</NavLink>
+					<NavLink className="menu-item" to="/">
+						<li>contact</li>
+					</NavLink>
+					<NavLink className="menu-item" to="/">
+						<li>blog</li>
+					</NavLink>
+				</MenuListBase>
+			</MenuOverlayBase>
+
+			<NavBase>
+				<span>Steff Dziadkowiec</span>
+				<BurgerContainer onClick={() => handleOpen()}>
+					<div />
+					<div />
+					<div />
+				</BurgerContainer>
+				<NavListBase>
+					<NavLink className="nav-item" to="/">
+						<li>home</li>
+					</NavLink>
+					<NavLink className="nav-item" to="/about">
+						<li>about</li>
+					</NavLink>
+					<NavLink className="nav-item" to="/projects">
+						<li>projects</li>
+					</NavLink>
+					<NavLink className="nav-item" to="/contact">
+						<li>contact</li>
+					</NavLink>
+					<NavLink className="nav-item" to="/blog">
+						<li>blog</li>
+					</NavLink>
+				</NavListBase>
+			</NavBase>
+		</header>
 	);
 };
 
@@ -87,26 +104,65 @@ const BurgerContainer = styled.div`
 		height: 6px;
 		background-color: #ffdf6c;
 	}
+
+	@media only screen and (max-width: 850px) {
+		display: flex;
+	}
 `;
 
-const NavList = styled.ul`
-		display: flex;
-		height: 100%;
-		width: 30vw;
-		justify-content: space-around;
-		align-items: center;
-		list-style: none;
-		margin: 0;
-		padding: 0;
+const MenuOverlayBase = styled.div`
+	width: 60%;
+	height: 100%;
+	background-color: #202020;
+	position: absolute;
+	z-index: 10;
+	right: -600px;
+
+	.fa-times {
+		font-size: 4rem;
+		color: #ffdf6c;
+		padding: 0 2rem;
 	}
+
+	@media only screen and (min-width: 850px) {
+		display: none;
+	}
+`;
+
+const MenuListBase = styled.ul`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	list-style: none;
+	gap: 2rem;
+
+	.menu-item {
+		color: #ffdf6c;
+		font-size: 2.5rem;
+		text-decoration: none;
+	}
+`;
+
+const NavListBase = styled.ul`
+	display: flex;
+	height: 100%;
+	width: 30vw;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 
 	.nav-item {
 		text-decoration: none;
 		color: white;
 		font-size: 2.5rem;
 		padding: 0rem .5rem;
-	
+	}
 
+	@media only screen and (max-width: 850px) {
+		display: none;
+	}
 `;
 
 export default SiteNavigation;
