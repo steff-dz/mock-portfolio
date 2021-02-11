@@ -22,16 +22,16 @@ const SiteNavigation = () => {
 					<NavLink className="menu-item" to="/">
 						<li>home</li>
 					</NavLink>
-					<NavLink className="menu-item" to="/">
+					<NavLink className="menu-item" to="/about">
 						<li>about</li>
 					</NavLink>
-					<NavLink className="menu-item" to="/">
+					<NavLink className="menu-item" to="/projects">
 						<li>projects</li>
 					</NavLink>
-					<NavLink className="menu-item" to="/">
+					<NavLink className="menu-item" to="/contact">
 						<li>contact</li>
 					</NavLink>
-					<NavLink className="menu-item" to="/">
+					<NavLink className="menu-item" to="/blog">
 						<li>blog</li>
 					</NavLink>
 				</MenuListBase>
