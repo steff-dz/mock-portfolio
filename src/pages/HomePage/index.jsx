@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
 import Cosmic from 'cosmicjs';
-//import Ellipse from '../../other/Ellipse';
 import Portrait from '../../other/Portrait.png';
 import BackgroundIndex from '../../other/backgroundindex.png';
 

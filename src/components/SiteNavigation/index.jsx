@@ -6,7 +6,7 @@ const SiteNavigation = () => {
 	const burgerMenu = useRef();
 
 	function handleOpen() {
-		console.log('you clicked the burger menu!');
+		//console.log('you clicked the burger menu!');
 		burgerMenu.current.style.right = 0;
 	}
 
