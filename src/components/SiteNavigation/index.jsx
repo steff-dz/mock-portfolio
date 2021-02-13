@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const SiteNavigation = () => {
+	//const [ currLocation, setCurrLocation ] = useState(location.href);
 	const burgerMenu = useRef();
 
 	function handleOpen() {

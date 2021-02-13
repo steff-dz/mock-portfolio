@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import CvIcon from '../../other/cv.png';
 
 const AboutPage = () => {
 	return (
@@ -15,8 +16,8 @@ const AboutPage = () => {
 								for a decade, and I have some serious stikkball skills.
 							</li>
 							<li>
-								My first game console was a Sega Genesis. My favorite games are Dragon Age, Zelda,
-								Pokemon and the Elder Scrolls.
+								My first game console was a Sega Genesis. My favorite games are Dragon Age, Zelda, and
+								Pokemon.
 							</li>
 							<li>
 								I spend 10 hours a week on roller skates. I skate with Chicks in Bowls Oslo, and I play
@@ -24,47 +25,55 @@ const AboutPage = () => {
 								Team Poland.
 							</li>
 							<li>
-								I love playing the accordion, puzzling, coffee, rock climbing, the KingKiller
-								Chronicles, crime podcasts, and bulletjournaling.
+								I love playing the accordion, puzzling, rock climbing, the KingKiller Chronicles, crime
+								podcasts, and bulletjournaling.
 							</li>
 						</ul>
 					</div>
 				</article>
 				<article>
-					<div>
-						<h1>languages</h1>
-						<ul>
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>SASS</li>
-							<li>JavaScript</li>
-						</ul>
-					</div>
-					<div>
-						<h1>libraries</h1>
-						<ul>
-							<li>React</li>
-							<li>Mapbox GL JS</li>
-						</ul>
-					</div>
-					<div>
-						<h1>other tools</h1>
-						<ul>
-							<li>Styled Components</li>
-							<li>Github</li>
-							<li>Cosmic JS</li>
-							<li>Netflify</li>
-							<li>Figma</li>
-						</ul>
-					</div>
+					<h1>languages</h1>
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>SASS</li>
+						<li>JavaScript</li>
+					</ul>
+
+					<h1>libraries</h1>
+					<ul>
+						<li>React</li>
+						<li>Mapbox GL JS</li>
+					</ul>
+
+					<h1>other</h1>
+					<ul>
+						<li>Styled Components</li>
+						<li>Github</li>
+						<li>Cosmic JS</li>
+						<li>Netflify</li>
+						<li>Figma</li>
+					</ul>
 				</article>
 			</AboutSection>
+			<LinkSection>
+				<div id="link-container">
+					<span />
+					<div id="icon-container">
+						<i className="fab fa-github-square" />
+						<i className="fab fa-linkedin" />
+						<img id="cv-icon" src={CvIcon} alt="" />
+					</div>
+				</div>
+				<a id="email" href="mailto:stefaniemarie.dz@gmail.com">
+					stefaniemarie.dz@gmail.com
+				</a>
+			</LinkSection>
 		</MainBase>
 	);
 };
 
 const MainBase = styled.main`
-	border: 1px solid black;
 	height: 65vh;
 	margin-top: 2.5rem;
 	margin-left: 10rem;
@@ -72,43 +81,118 @@ const MainBase = styled.main`
 `;
 
 const AboutSection = styled.section`
+	/* border: 1px solid black; */
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	height: 100%;
 
 	article {
-		border: 1px solid green;
 		height: 100%;
+
+		h1 {
+			font-size: 3rem;
+			font-weight: 400;
+		}
+
+		li {
+			font-size: 2.3rem;
+		}
 	}
 
 	article:nth-child(1) {
-		div {
-			border: 5px solid #ffdf6c;
-			width: 80%;
-			margin: 0 auto;
-			font-size: 2.3rem;
-			line-height: 3rem;
-			padding: 2.3rem;
+		border: 5px solid #ffdf6c;
+		width: 80%;
+		margin: 0 auto;
+		line-height: 3rem;
+		padding: 2.3rem;
 
-			ul {
-				list-style: inside;
+		ul {
+			list-style: inside;
 
-				li {
-					padding: .3rem 0rem;
-				}
+			li {
+				padding: .3rem 0rem;
 			}
 		}
 	}
 
 	article:nth-child(2) {
-		border: 1px solid red;
+		position: relative;
 
-		div {
-			ul {
-				list-style: none;
+		h1 {
+			z-index: -1;
+			background: linear-gradient(to bottom, #ffdf6c 50%, #ffffff 60%);
+			width: 40%;
+		}
+
+		ul {
+			list-style: none;
+
+			li {
+				padding-left: 2rem;
 			}
 		}
 	}
 `;
 
+const LinkSection = styled.section`
+	/* border: 1px solid black; */
+	width: 100%;
+	height: 20vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: .5rem;
+
+	#link-container {
+		/* border: 1px solid green; */
+		width: 40%;
+		height: 100px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		span {
+			background-color: #ffdf6c;
+			height: 2rem;
+			width: 70%;
+			padding-left: 10rem;
+		}
+
+		#icon-container {
+			font-size: 5rem;
+			position: absolute;
+			display: flex;
+			justify-items: center;
+			gap: 10px;
+			cursor: pointer;
+
+			#cv-icon {
+				height: 50px;
+
+				&:hover {
+					height: 55px;
+				}
+			}
+
+			i {
+				&:hover {
+					font-size: 5.5rem;
+				}
+			}
+		}
+	}
+
+	#email {
+		text-decoration: none;
+		font-size: 2rem;
+		color: #333;
+		padding: .5rem;
+
+		&:hover {
+			background-color: #ffdf6c;
+		}
+	}
+`;
 export default AboutPage;
