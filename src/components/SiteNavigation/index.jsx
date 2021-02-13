@@ -55,9 +55,6 @@ const SiteNavigation = () => {
 					<NavLink className="nav-item" to="/projects">
 						<li>projects</li>
 					</NavLink>
-					<NavLink className="nav-item" to="/contact">
-						<li>contact</li>
-					</NavLink>
 					<NavLink className="nav-item" to="/blog">
 						<li>blog</li>
 					</NavLink>

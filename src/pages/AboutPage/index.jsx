@@ -60,8 +60,12 @@ const AboutPage = () => {
 				<div id="link-container">
 					<span />
 					<div id="icon-container">
-						<i className="fab fa-github-square" />
-						<i className="fab fa-linkedin" />
+						<a href="https://github.com/steff-dz" target="_blank">
+							<i className="fab fa-github-square" />
+						</a>
+						<a href="https://www.linkedin.com/in/stefanie-dz/" target="_blank">
+							<i className="fab fa-linkedin" />
+						</a>
 						<img id="cv-icon" src={CvIcon} alt="" />
 					</div>
 				</div>
@@ -167,6 +171,10 @@ const LinkSection = styled.section`
 			justify-items: center;
 			gap: 10px;
 			cursor: pointer;
+
+			a {
+				color: #333;
+			}
 
 			#cv-icon {
 				height: 50px;
