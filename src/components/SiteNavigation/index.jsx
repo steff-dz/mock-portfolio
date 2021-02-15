@@ -29,12 +29,6 @@ const SiteNavigation = () => {
 					<NavLink className="menu-item" to="/projects">
 						<li>projects</li>
 					</NavLink>
-					<NavLink className="menu-item" to="/contact">
-						<li>contact</li>
-					</NavLink>
-					<NavLink className="menu-item" to="/blog">
-						<li>blog</li>
-					</NavLink>
 				</MenuListBase>
 			</MenuOverlayBase>
 
@@ -55,9 +49,6 @@ const SiteNavigation = () => {
 					<NavLink className="nav-item" to="/projects">
 						<li>projects</li>
 					</NavLink>
-					<NavLink className="nav-item" to="/blog">
-						<li>blog</li>
-					</NavLink>
 				</NavListBase>
 			</NavBase>
 		</header>
@@ -73,7 +64,7 @@ const NavBase = styled.nav`
 	justify-content: space-between;
 	align-items: center;
 	padding-left: 5rem;
-	padding-right: 10rem;
+	padding-right: 1rem;
 	overflow: hidden;
 
 	span {
@@ -83,7 +74,6 @@ const NavBase = styled.nav`
 
 	@media only screen and (max-width: 850px) {
 		padding-left: 1rem;
-		padding-right: 1rem;
 		span {
 			font-size: 2.5rem;
 		}
@@ -96,6 +86,7 @@ const BurgerContainer = styled.div`
 	flex-direction: column;
 	justify-content: space-evenly;
 	padding: .5rem;
+	margin-right: 2rem;
 	display: none;
 	cursor: pointer;
 	div {
@@ -147,8 +138,8 @@ const NavListBase = styled.ul`
 	display: flex;
 	height: 100%;
 	width: 30vw;
-	justify-content: space-around;
 	align-items: center;
+	gap: 1rem;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -156,7 +147,7 @@ const NavListBase = styled.ul`
 	.nav-item {
 		text-decoration: none;
 		color: white;
-		font-size: 2.5rem;
+		font-size: 3rem;
 		padding: 0rem .5rem;
 
 		&:hover {

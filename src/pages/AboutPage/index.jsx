@@ -78,28 +78,38 @@ const AboutPage = () => {
 };
 
 const MainBase = styled.main`
-	height: 65vh;
+	height: fit-content;
 	margin-top: 2.5rem;
 	margin-left: 10rem;
 	margin-right: 10rem;
+	@media only screen and (max-width: 750px) {
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
 `;
 
 const AboutSection = styled.section`
-	/* border: 1px solid black; */
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	height: 100%;
 
 	article {
 		height: 100%;
+		}
 
 		h1 {
 			font-size: 3rem;
 			font-weight: 400;
+			@media only screen and (max-width: 750px) {
+				font-size: 2.5em;
+			}
 		}
 
 		li {
 			font-size: 2.3rem;
+			@media only screen and (max-width: 750px) {
+				font-size: 2rem;
+			}
 		}
 	}
 
@@ -139,7 +149,6 @@ const AboutSection = styled.section`
 `;
 
 const LinkSection = styled.section`
-	/* border: 1px solid black; */
 	width: 100%;
 	height: 20vh;
 	display: flex;
@@ -148,7 +157,6 @@ const LinkSection = styled.section`
 	gap: .5rem;
 
 	#link-container {
-		/* border: 1px solid green; */
 		width: 40%;
 		height: 100px;
 		margin: 0 auto;
