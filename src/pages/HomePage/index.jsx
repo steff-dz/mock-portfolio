@@ -61,7 +61,6 @@ const HomeMainBase = styled.main`
 	}
 	img {
 		height: 600px;
-
 		align-self: flex-end;
 		margin-bottom: 3.8%;
 	}
