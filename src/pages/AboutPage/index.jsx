@@ -82,9 +82,9 @@ const MainBase = styled.main`
 	margin-top: 2.5rem;
 	margin-left: 10rem;
 	margin-right: 10rem;
-	@media only screen and (max-width: 750px) {
-		margin-left: 2rem;
-		margin-right: 2rem;
+	@media only screen and (max-width: 850px) {
+		margin-left: 0;
+		margin-right: 0;
 	}
 `;
 
@@ -92,6 +92,11 @@ const AboutSection = styled.section`
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	height: 100%;
+	@media only screen and (max-width: 850px){
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
 
 	article {
 		height: 100%;
@@ -130,12 +135,20 @@ const AboutSection = styled.section`
 	}
 
 	article:nth-child(2) {
+		//do i need position relative??
 		position: relative;
+		@media only screen and (max-width: 850px){
+			margin: 0rem 5rem;
+		}
 
 		h1 {
 			z-index: -1;
 			background: linear-gradient(to bottom, #ffdf6c 50%, #ffffff 60%);
 			width: 40%;
+			@media only screen and (max-width: 850px){
+			width: 100%;
+		}
+
 		}
 
 		ul {
@@ -170,6 +183,10 @@ const LinkSection = styled.section`
 			height: 2rem;
 			width: 70%;
 			padding-left: 10rem;
+
+			@media only screen and (max-width: 850px) {
+				width: 100%;
+			}
 		}
 
 		#icon-container {

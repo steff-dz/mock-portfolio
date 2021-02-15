@@ -64,7 +64,6 @@ const NavBase = styled.nav`
 	justify-content: space-between;
 	align-items: center;
 	padding-left: 5rem;
-	padding-right: 1rem;
 	overflow: hidden;
 
 	span {
@@ -142,6 +141,7 @@ const NavListBase = styled.ul`
 	gap: 1rem;
 	list-style: none;
 	margin: 0;
+	margin-right: 5%;
 	padding: 0;
 
 	.nav-item {
