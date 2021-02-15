@@ -5,6 +5,7 @@ import SiteNavigation from './components/SiteNavigation';
 //import Wrapper from './components/Wrapper';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import ProjectsPage from './pages/ProjectsPage';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 				<Switch>
 					<Route exact path="/" component={HomePage} />
 					<Route exact path="/about" component={AboutPage} />
+					<Route exact path="/projects" component={ProjectsPage} />
 				</Switch>
 			</Router>
 		</React.Fragment>
