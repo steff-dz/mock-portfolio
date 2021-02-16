@@ -66,7 +66,9 @@ const AboutPage = () => {
 						<a href="https://www.linkedin.com/in/stefanie-dz/" target="_blank">
 							<i className="fab fa-linkedin" />
 						</a>
-						<img id="cv-icon" src={CvIcon} alt="" />
+						<a href="/cv">
+							<img id="cv-icon" src={CvIcon} alt="" />
+						</a>
 					</div>
 				</div>
 				<a id="email" href="mailto:stefaniemarie.dz@gmail.com">

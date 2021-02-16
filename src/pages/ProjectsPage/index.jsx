@@ -81,6 +81,10 @@ const MainBase = styled.main`
 	margin-left: 5rem;
 	margin-right: 5rem;
 	height: 100vh;
+	@media only screen and (max-width: 1130px) {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
 
 	section {
 		display: grid;
@@ -88,10 +92,19 @@ const MainBase = styled.main`
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
 
+		@media only screen and (max-width: 1070px) {
+			display: flex;
+			flex-direction: column;
+		}
+
 		div {
 			display: flex;
 			justify-content: flex-end;
 			gap: 1rem;
+
+			@media only screen and (max-width: 1070px) {
+				justify-content: center;
+			}
 
 			article {
 				height: 250px;
@@ -114,6 +127,10 @@ const MainBase = styled.main`
 
 		.right-container {
 			justify-content: flex-start;
+
+			@media only screen and (max-width: 1070px) {
+				justify-content: center;
+			}
 		}
 
 		.grey-box {
@@ -126,7 +143,7 @@ const MainBase = styled.main`
 		}
 
 		.placeholder-container {
-			background-color: rgba(0, 0, 0, 0.103);
+			background-color: rgba(0, 0, 0, 0.164);
 		}
 
 		.text-container {
