@@ -15,7 +15,7 @@ const ProjectsPage = () => {
 							<li>Cosmic JS</li>
 							<li>Mapbox GL JS</li>
 							<li>Plotly</li>
-							<li>styled Components</li>
+							<li>Styled Components</li>
 						</ul>
 						<div className="descrip-text">
 							Using Mapbox GL JS, I made a local's guide to Chicago in React with venues generated from
@@ -24,24 +24,52 @@ const ProjectsPage = () => {
 						</div>
 					</article>
 					<article>
-						<img src={ChicagoClip} />
+						<a href="https://github.com/steff-dz/tema5" target="_blank">
+							<img src={ChicagoClip} />
+						</a>
 					</article>
 				</div>
+
 				<div className="right-container">
 					<article>
-						<img src={TaskAppClip} />
+						<a href="https://github.com/steff-dz/task-app" target="_blank">
+							<img src={TaskAppClip} />
+						</a>
 					</article>
-					<article className="text-container">pic container</article>
+					<article className="text-container grey-box">
+						<ul>
+							<li>React</li>
+							<li>SASS</li>
+						</ul>
+						<div className="descrip-text">
+							This is my take on the classic React "to do" app. It features a filtering option, delete
+							funcionality, and saving to local storage by a custom hook. It also has a random quote
+							generator from a free quote API, and a dynamic calender made from scratch.
+						</div>
+					</article>
 				</div>
 				<div>
-					<article>
-						<img src={ShopClip} />
+					<article className="white-box">
+						<a href="https://github.com/steff-dz/skate-shop" target="_blank">
+							<img src={ShopClip} />
+						</a>
 					</article>
-					<article className="text-container">pic container</article>
+					<article className="text-container grey-box">
+						<ul>
+							<li>HTML5</li>
+							<li>CSS</li>
+							<li>JavaScript</li>
+						</ul>
+						<div className="descrip-text">
+							This is a webshop selling rollerskates and helmets that was my second coding project. It
+							includes a functional shopping cart, a dynamically rendered product page, and use of local
+							storage.
+						</div>
+					</article>
 				</div>
 				<div className="right-container">
-					<article>textr</article>
-					<article>pic container</article>
+					<article className="placeholder-container" />
+					<article className="placeholder-container" />
 				</div>
 			</section>
 		</MainBase>
@@ -62,17 +90,13 @@ const MainBase = styled.main`
 
 		div {
 			display: flex;
-			/* border: 1px solid green; */
 			justify-content: flex-end;
 			gap: 1rem;
 
 			article {
-				/* border: 1px solid blue; */
 				height: 250px;
 				width: 250px;
 				background-color: #ffdf6c;
-				overflow: hidden;
-				box-shadow: 1px 2px 10px 3px rgba(0, 0, 0, 0.89);
 
 				img {
 					height: 100%;
@@ -90,6 +114,32 @@ const MainBase = styled.main`
 
 		.right-container {
 			justify-content: flex-start;
+		}
+
+		.grey-box {
+			background-color: #c4c4c4;
+		}
+
+		.white-box {
+			background-color: white;
+			border: 1px solid grey;
+		}
+
+		.placeholder-container {
+			background-color: rgba(0, 0, 0, 0.103);
+		}
+
+		.text-container {
+			font-size: 1.4rem;
+			overflow-y: scroll;
+
+			ul {
+				padding: 1rem 3rem;
+			}
+
+			.descrip-text {
+				padding: 0rem 2rem;
+			}
 		}
 	}
 `;
