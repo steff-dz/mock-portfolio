@@ -23,7 +23,7 @@ const ProjectsPage = () => {
 							Plotly.
 						</div>
 					</article>
-					<article>
+					<article className="clip-container">
 						<a href="https://github.com/steff-dz/tema5" target="_blank">
 							<img src={ChicagoClip} />
 						</a>
@@ -31,7 +31,7 @@ const ProjectsPage = () => {
 				</div>
 
 				<div className="right-container">
-					<article>
+					<article className="clip-container">
 						<a href="https://github.com/steff-dz/task-app" target="_blank">
 							<img src={TaskAppClip} />
 						</a>
@@ -49,7 +49,7 @@ const ProjectsPage = () => {
 					</article>
 				</div>
 				<div>
-					<article className="white-box">
+					<article className="white-box clip-container">
 						<a href="https://github.com/steff-dz/skate-shop" target="_blank">
 							<img src={ShopClip} />
 						</a>
@@ -75,6 +75,7 @@ const ProjectsPage = () => {
 		</MainBase>
 	);
 };
+//const MainBase = styled.main``;
 
 const MainBase = styled.main`
 	margin-top: 2.5rem;
@@ -144,6 +145,10 @@ const MainBase = styled.main`
 
 		.placeholder-container {
 			background-color: rgba(0, 0, 0, 0.164);
+		}
+
+		.clip-container {
+			overflow: hidden;
 		}
 
 		.text-container {

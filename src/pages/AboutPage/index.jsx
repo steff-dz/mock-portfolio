@@ -79,12 +79,16 @@ const AboutPage = () => {
 		</MainBase>
 	);
 };
+// const MainBase = styled.main``;
+// const AboutSection = styled.section``;
+// const LinkSection = styled.section``;
 
 const MainBase = styled.main`
 	height: fit-content;
 	margin-top: 2.5rem;
 	margin-left: 10rem;
 	margin-right: 10rem;
+	color: #3f3f3f;
 	@media only screen and (max-width: 850px) {
 		margin-left: 0;
 		margin-right: 0;
@@ -117,6 +121,7 @@ const AboutSection = styled.section`
 			font-size: 2.3rem;
 			@media only screen and (max-width: 750px) {
 				font-size: 2rem;
+				line-height: 2.3rem;
 			}
 		}
 	}
@@ -138,7 +143,6 @@ const AboutSection = styled.section`
 	}
 
 	article:nth-child(2) {
-		//do i need position relative??
 		position: relative;
 		@media only screen and (max-width: 850px){
 			margin: 0rem 5rem;
@@ -225,6 +229,7 @@ const LinkSection = styled.section`
 		font-size: 2rem;
 		color: #333;
 		padding: .5rem;
+		overflow: hidden;
 
 		&:hover {
 			background-color: #ffdf6c;

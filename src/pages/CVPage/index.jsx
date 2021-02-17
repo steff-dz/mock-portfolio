@@ -27,7 +27,7 @@ const CVPage = () => {
 					</ul>
 				</div>
 				<div style={{ backgroundColor: '#e6dade' }}>
-					<img src={ImgResume} alt="me" />
+					<img src="https://i.imgur.com/kaPocmX.jpg" alt="me" />
 				</div>
 				<div style={{ backgroundColor: '#c4c4c4' }}>
 					<h1>Education</h1>
@@ -152,7 +152,7 @@ const SectionOneBase = styled.section`
 		div {
 			overflow-y: scroll;
 			padding: 1.5rem;
-			
+
 			h1 {
 				font-size: 3rem;
 				margin-left: 1rem;
