@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ImgResume from '../../other/Resumeimg.jpg';
+import ImgResume from '../../images/Resumeimg.jpg';
 
 const CVPage = () => {
 	return (

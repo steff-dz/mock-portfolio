@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import ChicagoClip from '../../other/ChicagoGuide.jpg';
-import ShopClip from '../../other/SkateShop.jpg';
-import TaskAppClip from '../../other/TaskApp.jpg';
+import ChicagoClip from '../../images/ChicagoGuide.jpg';
+import ShopClip from '../../images/SkateShop.jpg';
+import TaskAppClip from '../../images/TaskApp.jpg';
 
 const ProjectsPage = () => {
 	return (

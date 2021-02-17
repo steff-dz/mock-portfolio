@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import CvIcon from '../../other/cv.png';
+import CvIcon from '../../images/cv.png';
 
 const AboutPage = () => {
 	return (
