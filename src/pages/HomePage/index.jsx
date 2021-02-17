@@ -1,46 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Cosmic from 'cosmicjs';
 import Portrait from '../../other/Portrait.png';
 import BackgroundIndex from '../../other/backgroundindex.png';
 
 const HomePage = () => {
-	const [ pageData, setPageData ] = useState(null);
-
-	useEffect(() => {
-		const client = new Cosmic();
-		const bucket = client.bucket({
-			slug: process.env.BUCKET_SLUG,
-			read_key: process.env.READ_KEY
-		});
-
-		bucket
-			.getObject({
-				slug: 'home-page',
-				props: 'slug,title,content'
-			})
-			.then((data) => {
-				setPageData(data.object);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	}, []);
-
-	function renderSkeleton() {
-		return <p>Loading page...</p>;
-	}
-
 	function renderPage() {
 		return (
 			<section>
-				<article dangerouslySetInnerHTML={{ __html: pageData.content }} />
+				<article>
+					<h1>Junior</h1>
+					<h1>Front-End Developer</h1>
+					<p>
+						I am a fresh developer based in Oslo, Norway. Learning, creating and teaching is what I do best.
+						I have a passion for crafting efficient and interactive web applications, and solving puzzles is
+						my jam.
+					</p>
+				</article>
 				<img src={Portrait} />
 			</section>
 		);
 	}
 
-	return <HomeMainBase>{pageData === null ? renderSkeleton() : renderPage()}</HomeMainBase>;
+	return <HomeMainBase>{renderPage()}</HomeMainBase>;
 };
 
 const HomeMainBase = styled.main`
