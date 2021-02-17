@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 import CvIcon from '../../images/cv.png';
 
 const AboutPage = () => {
@@ -66,9 +67,9 @@ const AboutPage = () => {
 						<a href="https://www.linkedin.com/in/stefanie-dz/" target="_blank">
 							<i className="fab fa-linkedin" />
 						</a>
-						<a href="/cv">
+						<NavLink to="/cv">
 							<img id="cv-icon" src={CvIcon} alt="" />
-						</a>
+						</NavLink>
 					</div>
 				</div>
 				<a id="email" href="mailto:stefaniemarie.dz@gmail.com">
