@@ -12,7 +12,7 @@ const SiteNavigation = () => {
 	}
 
 	function handleClose() {
-		burgerMenu.current.style.right = `-600px`;
+		burgerMenu.current.style.right = `-400vw`;
 	}
 
 	return (
@@ -105,7 +105,7 @@ const MenuOverlayBase = styled.div`
 	background-color: #202020;
 	position: absolute;
 	z-index: 10;
-	right: -600px;
+	right: -400vw;
 
 	.fa-times {
 		font-size: 4rem;

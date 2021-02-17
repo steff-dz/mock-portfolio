@@ -4,8 +4,14 @@ import Portrait from '../../images/Portrait.png';
 import BackgroundIndex from '../../images/backgroundindex.png';
 
 const HomePage = () => {
-	function renderPage() {
-		return (
+	// function renderPage() {
+	// 	return (
+
+	// 	);
+	// }
+
+	return (
+		<HomeMainBase>
 			<section>
 				<article>
 					<h1>Junior</h1>
@@ -18,14 +24,13 @@ const HomePage = () => {
 				</article>
 				<img src={Portrait} />
 			</section>
-		);
-	}
-
-	return <HomeMainBase>{renderPage()}</HomeMainBase>;
+		</HomeMainBase>
+	);
 };
 
 const HomeMainBase = styled.main`
 	background-color: lightgrey;
+	/* height: 100vh; */
 	height: 100vh;
 	background-image: url(${BackgroundIndex});
 	background-size: cover;
