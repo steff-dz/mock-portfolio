@@ -35,6 +35,10 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    overflow-x: hidden;
+}
+
 `;
 
 export default GlobalStyle;
