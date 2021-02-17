@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Portrait from '../../images/Portrait.png';
-import BackgroundIndex from '../../images/Backgroundindex.png';
+import BackgroundIndex from '../../images/backgroundindex.png';
 
 const HomePage = () => {
 	function renderPage() {
