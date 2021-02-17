@@ -26,7 +26,7 @@ const CVPage = () => {
 						</li>
 					</ul>
 				</div>
-				<div style={{ backgroundColor: '#c4c4c4' }}>
+				<div style={{ backgroundColor: '#e6dade' }}>
 					<img src={ImgResume} alt="me" />
 				</div>
 				<div style={{ backgroundColor: '#c4c4c4' }}>
@@ -80,7 +80,7 @@ const CVPage = () => {
 						<li>Responsible</li>
 						<li>Outgoing</li>
 						<li>Multilingual </li>
-						<li>Roller Skating Instructor </li>
+						<li>Instructor & Trainer</li>
 					</ul>
 				</div>
 			</SectionOneBase>
@@ -89,34 +89,32 @@ const CVPage = () => {
 					<h1>Work History</h1>
 					<ul>
 						<li>
-							<b>Avdelingsleder (Manager) at Smestad Activity School in Oslo, Norway</b>
+							<b>Manager (Avdelingsleder)</b>
+							<br />
+							Smestad Activity School in Oslo, Norway
 							<br />
 							11/2017 - 06/2020<br />
-							Manaer of the second grade with approximately 100 children each year. I organized and
-							facilitated daily activities, trained and managed a staff of ten employees, and coordinated
-							between teachers and parents. I also designed and maintained the AKS website.
 						</li>
 						<li>
-							<b>Assistant and Substitute Teacher at Smestad School & Activity School</b>
+							<b>Assistant and Substitute Teacher</b>
+							<br />
+							Smestad School & Activity School in Oslo, Norway
 							<br />
 							08/2014 - 11/2017<br />
-							Manaer of the second grade with approximately 100 children each year. I organized and
-							facilitated daily activities, trained and managed a staff of ten employees, and coordinated
-							between teachers and parents. I also designed and maintained the AKS website.
 						</li>
 						<li>
-							<b>Private Instructor in Oslo, Norway and Fargo, ND USA</b>
+							<b>Private Academic Tutor</b>
+							<br />
+							Oslo, Norway & Fargo, ND USA
 							<br />
 							2010 - 2016<br />
-							I have worked as a private tutor to children between the ages of 9 and 14 in the subjects of
-							German and English.
 						</li>
 						<li>
-							<b>Hostess at Denny's in Fargo, ND USA</b>
+							<b>Restaurant Hostess</b>
+							<br />
+							Denny's in Fargo, ND USA
 							<br />
 							05/2011 - 08/2011<br />
-							I worked as a Hostess at a restaurant chain for a summer. My work as a hostess focused
-							largely on customer service and working the cash register.
 						</li>
 					</ul>
 				</div>
@@ -128,6 +126,10 @@ const CVPage = () => {
 const MainBase = styled.main`
 	margin: 3rem 5rem;
 	height: fit-content;
+	@media only screen and (max-width: 1140px) {
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
 `;
 
 const SectionOneBase = styled.section`
@@ -138,12 +140,24 @@ const SectionOneBase = styled.section`
 		grid-template-rows: 200px 300px;
 		gap: 2rem;
 
+		@media only screen and (max-width: 1140px) {
+		width: 90vw;
+	   }
+
+	   @media only screen and (max-width: 850px) {
+		display: flex;
+		flex-direction: column;
+	   }
+
 		div {
 			overflow-y: scroll;
+			padding: 1.5rem;
+			
 			h1 {
 				font-size: 3rem;
 				margin-left: 1rem;
 				margin-top: .3rem;
+				margin-bottom: 1rem;
 			}
 
 			ul {
@@ -154,23 +168,39 @@ const SectionOneBase = styled.section`
 
 		div:nth-child(2) {
 			overflow: hidden;
+			padding: 0;
 			img {
 				width: 100%;
+				@media only screen and (max-width: 1380px){
+					height: 100%;
+					width: auto;
+				}
+				@media only screen and (max-width: 850px) {
+					display: none;
+	   			}
 			}
 		}
 	}
 `;
 
 const SectionTwoBase = styled.section`
-	margin: 3rem auto;
+	margin: 2rem auto;
 	width: 70vw;
 	background-color: #ffdf6c;
+	@media only screen and (max-width: 1140px) {
+		width: 90vw;
+	}
+
+	@media only screen and (max-width: 850px) {
+		background-color: #c4c4c4;
+	}
 
 	div {
-		padding: .5rem;
+		padding: 1.5rem;
 		h1 {
 			font-size: 3rem;
 			margin-left: 1rem;
+			margin-bottom: 1rem;
 		}
 
 		ul {
