@@ -135,6 +135,7 @@ const AboutSection = styled.section`
 
 		ul {
 			list-style: inside;
+			
 
 			li {
 				padding: .3rem 0rem;
@@ -160,6 +161,7 @@ const AboutSection = styled.section`
 
 		ul {
 			list-style: none;
+			overflow: hidden;
 
 			li {
 				padding-left: 2rem;
