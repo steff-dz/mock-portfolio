@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import ImgResume from '../../images/Resumeimg.jpg';
 
 const CVPage = () => {
 	return (
@@ -126,6 +125,8 @@ const CVPage = () => {
 const MainBase = styled.main`
 	margin: 3rem 5rem;
 	height: fit-content;
+	color: #3f3f3f;
+
 	@media only screen and (max-width: 1140px) {
 		margin-left: 2rem;
 		margin-right: 2rem;
@@ -139,7 +140,7 @@ const SectionOneBase = styled.section`
 		grid-template-columns: 2fr 1fr;
 		grid-template-rows: 200px 300px;
 		gap: 2rem;
-
+	
 		@media only screen and (max-width: 1140px) {
 		width: 90vw;
 	   }
@@ -147,11 +148,14 @@ const SectionOneBase = styled.section`
 	   @media only screen and (max-width: 850px) {
 		display: flex;
 		flex-direction: column;
+		gap: 1rem;
 	   }
 
 		div {
 			overflow-y: scroll;
 			padding: 1.5rem;
+
+		
 
 			h1 {
 				font-size: 3rem;

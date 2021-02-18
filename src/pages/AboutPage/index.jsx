@@ -17,8 +17,8 @@ const AboutPage = () => {
 								for a decade, and I have some serious stikkball skills.
 							</li>
 							<li>
-								My first game console was a Sega Genesis. My favorite games are Dragon Age, Zelda, and
-								Pokemon.
+								My first game console was a Sega Genesis, and my favorite game of all time are the
+								Dragon Age series.
 							</li>
 							<li>
 								I spend 10 hours a week on roller skates. I skate with Chicks in Bowls Oslo, and I play
@@ -127,7 +127,7 @@ const AboutSection = styled.section`
 	}
 
 	article:nth-child(1) {
-		border: 5px solid #ffdf6c;
+		border: 2px solid #ffdf6c;
 		width: 80%;
 		margin: 0 auto;
 		line-height: 3rem;
@@ -188,9 +188,8 @@ const LinkSection = styled.section`
 		span {
 			background-color: #ffdf6c;
 			height: 2rem;
-			width: 70%;
+			width: 60%;
 			padding-left: 10rem;
-
 			@media only screen and (max-width: 850px) {
 				width: 100%;
 			}

@@ -82,6 +82,7 @@ const MainBase = styled.main`
 	margin-left: 5rem;
 	margin-right: 5rem;
 	height: 100vh;
+	overflow-y: hidden;
 	@media only screen and (max-width: 1130px) {
 		margin-left: 1rem;
 		margin-right: 1rem;
@@ -135,7 +136,7 @@ const MainBase = styled.main`
 		}
 
 		.grey-box {
-			background-color: #c4c4c4;
+			background-color: #ffdf6c;
 		}
 
 		.white-box {
