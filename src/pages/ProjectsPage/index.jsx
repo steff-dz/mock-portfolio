@@ -75,13 +75,12 @@ const ProjectsPage = () => {
 		</MainBase>
 	);
 };
-//const MainBase = styled.main``;
 
 const MainBase = styled.main`
 	margin-top: 2.5rem;
 	margin-left: 5rem;
 	margin-right: 5rem;
-	height: 100vh;
+	min-height: 100vh;
 	overflow-y: hidden;
 	@media only screen and (max-width: 1130px) {
 		margin-left: 1rem;

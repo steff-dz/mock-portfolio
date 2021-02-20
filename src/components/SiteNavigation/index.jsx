@@ -91,7 +91,7 @@ const NavListBase = styled.ul`
 
 	@media only screen and (max-width: 280px) {
 		padding-right: 1.3rem;
-		gap: 1.5rem;
+		gap: 0rem;
 	}
 
 	.nav-item {
@@ -111,6 +111,9 @@ const NavListBase = styled.ul`
 		}
 
 		@media only screen and (max-width: 280px) {
+			li {
+				padding: 0rem 0.5rem;
+			}
 		}
 	}
 

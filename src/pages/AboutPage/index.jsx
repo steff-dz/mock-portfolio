@@ -79,9 +79,6 @@ const AboutPage = () => {
 		</MainBase>
 	);
 };
-// const MainBase = styled.main``;
-// const AboutSection = styled.section``;
-// const LinkSection = styled.section``;
 
 const MainBase = styled.main`
 	height: fit-content;
@@ -119,6 +116,7 @@ const AboutSection = styled.section`
 
 		li {
 			font-size: 2.3rem;
+
 			@media only screen and (max-width: 750px) {
 				font-size: 2rem;
 				line-height: 2.3rem;
@@ -145,14 +143,18 @@ const AboutSection = styled.section`
 
 	article:nth-child(2) {
 		position: relative;
+		overflow: hidden;
+
 		@media only screen and (max-width: 850px){
 			margin: 0rem 5rem;
+			
 		}
 
 		h1 {
 			z-index: -1;
 			background: linear-gradient(to bottom, #ffdf6c 50%, #ffffff 60%);
 			width: 40%;
+
 			@media only screen and (max-width: 850px){
 			width: 100%;
 		}
@@ -173,6 +175,8 @@ const AboutSection = styled.section`
 const LinkSection = styled.section`
 	width: 100%;
 	height: 20vh;
+	height: fit-content;
+	overflow: scroll;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -195,6 +199,10 @@ const LinkSection = styled.section`
 			@media only screen and (max-width: 850px) {
 				width: 100%;
 			}
+		}
+
+		@media only screen and (max-width: 280px) {
+			width: 70%;
 		}
 
 		#icon-container {
