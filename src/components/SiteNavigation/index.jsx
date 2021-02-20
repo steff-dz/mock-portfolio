@@ -7,7 +7,7 @@ const SiteNavigation = () => {
 		<NavBase>
 			<nav>
 				<NavLink id="logo" to="/">
-					<span>Steff Dziadkowiec</span>
+					Steff Dziadkowiec
 				</NavLink>
 				<NavListBase>
 					<NavLink className="nav-item" to="/">
@@ -36,11 +36,17 @@ const NavBase = styled.header`
 		align-items: center;
 		height: 100%;
 
+		@media only screen and (max-width: 280px) {
+			justify-items: center;
+			border: 1px solid white;
+		}
+
 		#logo {
 			text-decoration: none;
 			font-size: 4rem;
 			padding-left: 3rem;
 			color: white;
+			width: fit-content;
 			@media only screen and (max-width: 850px) {
 				font-size: 3rem;
 			}
@@ -48,6 +54,12 @@ const NavBase = styled.header`
 			@media only screen and (max-width: 680px) {
 				font-size: 2.5rem;
 				padding-left: 1rem;
+			}
+
+			@media only screen and (max-width: 280px) {
+				font-size: 2.3rem;
+				padding-left: 0.5rem;
+				width: 139px;
 			}
 		}
 	}
@@ -59,6 +71,7 @@ const NavListBase = styled.ul`
 	list-style: none;
 	justify-content: flex-end;
 	padding-right: 11rem;
+	width: fit-content;
 
 	@media only screen and (max-width: 850px) {
 		padding-right: 5rem;
@@ -76,6 +89,11 @@ const NavListBase = styled.ul`
 		gap: 1rem;
 	}
 
+	@media only screen and (max-width: 280px) {
+		padding-right: 1.3rem;
+		gap: 1.5rem;
+	}
+
 	.nav-item {
 		text-decoration: none;
 		font-size: 3.5rem;
@@ -90,6 +108,9 @@ const NavListBase = styled.ul`
 
 		@media only screen and (max-width: 480px) {
 			font-size: 1.5rem;
+		}
+
+		@media only screen and (max-width: 280px) {
 		}
 	}
 

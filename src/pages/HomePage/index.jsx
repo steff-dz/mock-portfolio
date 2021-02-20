@@ -93,6 +93,14 @@ const InfoSection = styled.section`
 				font-size: 5rem;
 			}
 		}
+
+		@media only screen and (max-width: 280px) {
+			width: 90%;
+			margin-left: 0.5rem;
+			height: fit-content;
+			
+			
+		}
 	}
 
 	img {
@@ -111,6 +119,9 @@ const InfoSection = styled.section`
 			margin: 0;
 			align-self: flex-start;
 		}
+
+		@media only screen and (max-width: 280px) {
+			height: 400px;
 	}
 `;
 
