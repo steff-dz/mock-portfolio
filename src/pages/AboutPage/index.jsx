@@ -34,7 +34,7 @@ const AboutPage = () => {
 				</article>
 				<article>
 					<h1>languages</h1>
-					<ul>
+					<ul className="skills-list">
 						<li>HTML</li>
 						<li>CSS</li>
 						<li>SASS</li>
@@ -42,13 +42,13 @@ const AboutPage = () => {
 					</ul>
 
 					<h1>libraries</h1>
-					<ul>
+					<ul className="skills-list">
 						<li>React</li>
 						<li>Mapbox GL JS</li>
 					</ul>
 
 					<h1>other</h1>
-					<ul>
+					<ul className="skills-list">
 						<li>Styled Components</li>
 						<li>Github</li>
 						<li>Cosmic JS</li>
@@ -161,7 +161,7 @@ const AboutSection = styled.section`
 
 		}
 
-		ul {
+		.skills-list {
 			list-style: none;
 			overflow: hidden;
 
