@@ -7,7 +7,7 @@ const SiteNavigation = () => {
 		<NavBase>
 			<nav>
 				<NavLink id="logo" to="/">
-					Steff Dziadkowiec
+					<span style={{ color: '#ffdf6c' }}>S</span>teff <span style={{ color: '#ffdf6c' }}>D</span>ziadkowiec
 				</NavLink>
 				<NavListBase>
 					<NavLink className="nav-item" activeStyle={{ color: '#ffdf6c' }} exact to="/">

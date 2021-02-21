@@ -52,7 +52,7 @@ const AboutPage = () => {
 						<li>Styled Components</li>
 						<li>Github</li>
 						<li>Cosmic JS</li>
-						<li>Netflify</li>
+						<li>Netlify</li>
 						<li>Figma</li>
 					</ul>
 				</article>
