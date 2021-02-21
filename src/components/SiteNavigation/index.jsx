@@ -10,13 +10,13 @@ const SiteNavigation = () => {
 					Steff Dziadkowiec
 				</NavLink>
 				<NavListBase>
-					<NavLink className="nav-item" to="/">
+					<NavLink className="nav-item" activeStyle={{ color: '#ffdf6c' }} exact to="/">
 						<li>home</li>
 					</NavLink>
-					<NavLink className="nav-item" to="/about">
+					<NavLink className="nav-item" activeStyle={{ color: '#ffdf6c' }} exact to="/about">
 						<li>about</li>
 					</NavLink>
-					<NavLink className="nav-item" to="/projects">
+					<NavLink className="nav-item" activeStyle={{ color: '#ffdf6c' }} exact to="/projects">
 						<li>projects</li>
 					</NavLink>
 				</NavListBase>

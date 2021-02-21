@@ -67,7 +67,7 @@ const AboutPage = () => {
 						<a href="https://www.linkedin.com/in/stefanie-dz/" target="_blank">
 							<i className="fab fa-linkedin" />
 						</a>
-						<NavLink to="/cv">
+						<NavLink exact to="/cv">
 							<img id="cv-icon" src={CvIcon} alt="" />
 						</NavLink>
 					</div>
